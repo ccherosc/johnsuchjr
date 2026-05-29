@@ -758,7 +758,73 @@
 </div>
 
   <script>
-    // JS added in Task 12
+    // --- Nav scroll behavior ---
+const navbar = document.getElementById('navbar')
+const navLogo = document.getElementById('nav-logo')
+const desktopNavLinks = document.querySelectorAll('#desktop-nav .nav-link')
+
+function updateNav() {
+  const scrolled = window.scrollY > 80
+  if (scrolled) {
+    navbar.classList.add('nav-scrolled')
+  } else {
+    navbar.classList.remove('nav-scrolled')
+  }
+  // Logo stays white-filtered — nav is always dark when scrolled
+  navLogo.style.filter = 'brightness(0) invert(1)'
+  desktopNavLinks.forEach(l => { l.style.color = scrolled ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.8)' })
+}
+
+window.addEventListener('scroll', updateNav, { passive: true })
+updateNav()
+
+// --- Hamburger menu ---
+const hamburger = document.getElementById('hamburger')
+const mobileMenu = document.getElementById('mobile-menu')
+const hb1 = document.getElementById('hb1')
+const hb2 = document.getElementById('hb2')
+const hb3 = document.getElementById('hb3')
+let menuOpen = false
+
+hamburger.addEventListener('click', () => {
+  menuOpen = !menuOpen
+  mobileMenu.classList.toggle('hidden', !menuOpen)
+  hb1.style.transform = menuOpen ? 'rotate(45deg) translateY(9px)' : ''
+  hb2.style.opacity = menuOpen ? '0' : '1'
+  hb3.style.transform = menuOpen ? 'rotate(-45deg) translateY(-9px)' : ''
+})
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    menuOpen = false
+    mobileMenu.classList.add('hidden')
+    hb1.style.transform = ''
+    hb2.style.opacity = '1'
+    hb3.style.transform = ''
+  })
+})
+
+// --- FAQ Accordion ---
+function toggleFaq(trigger) {
+  const item = trigger.closest('.faq-item')
+  const answer = item.querySelector('.faq-answer')
+  const icon = trigger.querySelector('.faq-icon')
+  const isOpen = answer.classList.contains('open')
+
+  // Close all others
+  document.querySelectorAll('.faq-answer.open').forEach(el => {
+    el.classList.remove('open')
+    el.closest('.faq-item').querySelector('.faq-icon').classList.remove('rotated')
+    el.closest('.faq-item').querySelector('.faq-icon').textContent = '+'
+  })
+
+  if (!isOpen) {
+    answer.classList.add('open')
+    icon.classList.add('rotated')
+    icon.textContent = '+'
+  }
+}
   </script>
 </body>
 </html>
