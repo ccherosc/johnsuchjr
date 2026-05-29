@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer'
-import { mkdir } from 'fs/promises'
+import { mkdir, copyFile } from 'fs/promises'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -35,7 +35,6 @@ for (const { slug, url } of projects) {
   } catch (e) {
     console.log(`  ✗ ${slug} failed: ${e.message}`)
     // Copy placeholder so the build doesn't break
-    const { copyFile } = await import('fs/promises')
     await copyFile(join(__dirname, 'images', 'john-such.jpg'), join(outDir, `${slug}.png`)).catch(() => {})
   }
   await page.close()
