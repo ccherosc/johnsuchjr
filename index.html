@@ -266,31 +266,49 @@
       </div>
     </div>
 
-    <!-- Photo grid — 6 slots for user to populate -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-      <div class="rounded-2xl overflow-hidden aspect-square brand-card" style="border:1px solid #dce8f2;">
-        <img loading="lazy" src="images/family/placeholder.jpg" alt="Family" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-      </div>
-      <div class="rounded-2xl overflow-hidden aspect-square brand-card" style="border:1px solid #dce8f2;">
-        <img loading="lazy" src="images/family/placeholder.jpg" alt="Family" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-      </div>
-      <div class="rounded-2xl overflow-hidden aspect-square brand-card" style="border:1px solid #dce8f2;">
-        <img loading="lazy" src="images/family/placeholder.jpg" alt="Family" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-      </div>
-      <div class="rounded-2xl overflow-hidden aspect-square brand-card" style="border:1px solid #dce8f2;">
-        <img loading="lazy" src="images/family/placeholder.jpg" alt="Family" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-      </div>
-      <div class="rounded-2xl overflow-hidden aspect-square brand-card" style="border:1px solid #dce8f2;">
-        <img loading="lazy" src="images/family/placeholder.jpg" alt="Family" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-      </div>
-      <div class="rounded-2xl overflow-hidden aspect-square brand-card" style="border:1px solid #dce8f2;">
-        <img loading="lazy" src="images/family/placeholder.jpg" alt="Family" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-      </div>
+    <!-- Gallery controls -->
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+      <p class="text-[#6b8fa8] text-sm">Based in Simpsonville, SC. Blessed with good people.</p>
+      <button id="shuffle-btn" onclick="shuffleGallery()"
+        class="flex items-center gap-2 text-sm font-medium px-5 py-2 rounded-full transition-colors"
+        style="background:#f4f8fc;border:1px solid #dce8f2;color:#1a6fb5;">
+        <svg id="shuffle-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.4s ease">
+          <polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/>
+          <polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/>
+        </svg>
+        Shuffle Photos
+      </button>
     </div>
-    <p class="text-[#6b8fa8] text-sm text-center mt-6">Based in Simpsonville, SC. Blessed with good people.</p>
-    <p class="text-[#a0b8c8] text-xs text-center mt-2 italic">Photos: add your images to the <code>images/family/</code> folder and update the src attributes above.</p>
+
+    <!-- Photo grid — filled by JS -->
+    <div id="family-grid" class="grid grid-cols-2 sm:grid-cols-3 gap-4"></div>
+
   </div>
 </section>
+
+<!-- ==================== LIGHTBOX ==================== -->
+<div id="lightbox" class="hidden fixed inset-0 z-[60] flex items-center justify-center"
+  style="background:rgba(0,0,0,0.93);"
+  onclick="if(event.target===this)closeLightbox()">
+  <button onclick="closeLightbox()" aria-label="Close"
+    class="absolute top-5 right-5 text-white/60 hover:text-white text-4xl leading-none font-light"
+    style="transition:color .2s">×</button>
+  <button onclick="lightboxPrev();event.stopPropagation()" aria-label="Previous photo"
+    class="absolute left-3 md:left-6 text-white/60 hover:text-white p-3 rounded-full"
+    style="transition:color .2s;background:rgba(255,255,255,0.05)">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <div class="flex flex-col items-center gap-3 px-16 md:px-24 max-w-5xl w-full">
+    <img id="lightbox-img" src="" alt="" class="max-h-[80vh] max-w-full object-contain rounded-xl">
+    <p id="lightbox-caption" class="text-white/60 text-sm text-center max-w-lg leading-relaxed"></p>
+    <p id="lightbox-counter" class="text-white/30 text-xs"></p>
+  </div>
+  <button onclick="lightboxNext();event.stopPropagation()" aria-label="Next photo"
+    class="absolute right-3 md:right-6 text-white/60 hover:text-white p-3 rounded-full"
+    style="transition:color .2s;background:rgba(255,255,255,0.05)">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+</div>
   <!-- ==================== RESUME ==================== -->
 <section id="resume" style="background:#f4f8fc;" class="py-24">
   <div class="max-w-6xl mx-auto px-6">
@@ -837,6 +855,127 @@ function toggleFaq(trigger) {
     icon.textContent = '×'
   }
 }
+
+// --- Family Gallery ---
+const FAMILY_PHOTOS = [
+  { file: 'such-family-thanksgiving-gathering-2024.jpg',   cat: 'family', alt: 'Such family Thanksgiving gathering 2024' },
+  { file: 'john-yve-renaissance-faire-costumes.jpg',       cat: 'couple', alt: 'John and Yve at Renaissance Faire in costume' },
+  { file: 'such-family-destin-florida-beach-vacation.jpg', cat: 'family', alt: 'Such family beach vacation in Destin, Florida' },
+  { file: 'john-such-son-prom-garden.jpg',                 cat: 'family', alt: 'John Such and son before prom' },
+  { file: 'john-such-jetski-marina-fistbump.jpg',          cat: 'family', alt: 'John Such and son fist-bumping on jet skis' },
+  { file: 'john-such-son-birthday-celebration.jpg',        cat: 'family', alt: 'John Such and son at birthday celebration' },
+  { file: 'john-such-friends-night-out.jpg',               cat: 'family', alt: 'John Such with family and friends' },
+  { file: 'john-such-black-belt-upstate-karate.jpg',       cat: 'family', alt: 'John Such earning his black belt at Upstate Karate' },
+  { file: 'such-family-outdoor-restaurant-gathering.jpg',  cat: 'family', alt: 'Such family gathering at an outdoor restaurant' },
+  { file: 'yve-such-renaissance-faire-face-paint.jpg',     cat: 'couple', alt: 'Yve Such with face paint at Renaissance Faire' },
+  { file: 'john-yve-renaissance-faire-dragon.jpg',         cat: 'couple', alt: 'John and Yve with a dragon costumed performer at Renaissance Faire' },
+  { file: 'such-family-restaurant-silly-selfie.jpg',       cat: 'family', alt: 'Such family silly selfie at a restaurant' },
+  { file: 'bryson-such-chess-game.jpg',                    cat: 'kids',   alt: 'Bryson Such focused on a chess game' },
+  { file: 'john-such-halloween-beetlejuice.jpg',           cat: 'family', alt: 'John Such in a Beetlejuice Halloween costume' },
+  { file: 'john-yve-brit-floyd-concert-2023.jpg',          cat: 'couple', alt: 'John and Yve at Brit Floyd concert 2023' },
+  { file: 'john-yve-halloween-mask-shopping.jpg',          cat: 'couple', alt: 'John and Yve trying on Halloween masks' },
+  { file: 'john-yve-lake-boat-day.jpg',                    cat: 'couple', alt: 'John and Yve on the lake on a boat day' },
+  { file: 'jt-such-largemouth-bass-fishing.jpg',           cat: 'kids',   alt: 'JT Such with a largemouth bass on a fishing boat' },
+  { file: 'bryson-such-thanksgiving-turkey-hat.jpg',       cat: 'kids',   alt: 'Bryson Such wearing a turkey hat at Thanksgiving' },
+  { file: 'jt-bryson-such-outdoors-with-friends.jpg',      cat: 'kids',   alt: 'JT and Bryson Such outdoors with friends' },
+  { file: 'john-yve-such-date-night-dressed-up.jpg',       cat: 'couple', alt: 'John and Yve Such dressed up for a date night' },
+  { file: 'john-such-son-prom-outdoor-portrait.jpg',       cat: 'family', alt: 'John Such with son at prom outdoor portrait' },
+  { file: 'john-such-portrait-headshot.jpg',               cat: 'family', alt: 'John Such portrait' },
+  { file: 'jt-bryson-such-brothers-indoor.jpg',            cat: 'kids',   alt: 'JT and Bryson Such brothers together' },
+  { file: 'john-yve-such-christmas-plaza.jpg',             cat: 'couple', alt: 'John and Yve Such at the Christmas plaza' },
+  { file: 'john-jt-bryson-such-arcade-fun.jpg',            cat: 'family', alt: 'John, JT, and Bryson Such having fun at the arcade' },
+  { file: 'john-such-sons-deck-outdoor.jpg',               cat: 'family', alt: 'John Such with his sons on the outdoor deck' },
+  { file: 'john-yve-such-outdoor-park-evening.jpg',        cat: 'couple', alt: 'John and Yve Such relaxing in the park' },
+  { file: 'john-bryson-such-golf-course.jpg',              cat: 'family', alt: 'John and Bryson Such at the golf course' },
+  { file: 'such-grandparents-outdoor-portrait.jpg',        cat: 'family', alt: 'Such family grandparents outdoor portrait' },
+  { file: 'john-jt-such-boat-marina-summer.jpg',           cat: 'family', alt: 'John and JT Such on a boat at the marina' },
+  { file: 'john-yve-such-halloween-costumes.jpg',          cat: 'couple', alt: 'John and Yve Such in Halloween costumes' },
+  { file: 'john-such-festival-performer-fun.jpg',          cat: 'family', alt: 'John Such with a festive costume performer' },
+  { file: 'jt-bryson-such-young-boys-throwback.jpg',       cat: 'kids',   alt: 'JT and Bryson Such as young boys throwback photo' },
+  { file: 'such-grandparents-80th-birthday.jpg',           cat: 'family', alt: 'Such grandparents celebrating 80th birthday' },
+  { file: 'jt-bryson-such-beach-pier-fishing.jpg',         cat: 'kids',   alt: 'JT and Bryson Such fishing on the beach pier' },
+]
+
+function shuffleArr(arr) {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+// Always show 2 family + 2 couple + 2 kids, then shuffle order
+function pickBalanced() {
+  const pools = {
+    family: shuffleArr(FAMILY_PHOTOS.filter(p => p.cat === 'family')),
+    couple: shuffleArr(FAMILY_PHOTOS.filter(p => p.cat === 'couple')),
+    kids:   shuffleArr(FAMILY_PHOTOS.filter(p => p.cat === 'kids')),
+  }
+  const picks = [
+    ...pools.family.slice(0, 2),
+    ...pools.couple.slice(0, 2),
+    ...pools.kids.slice(0, 2),
+  ]
+  return shuffleArr(picks)
+}
+
+let galleryPicks = []
+let lightboxIndex = 0
+
+function renderGallery() {
+  galleryPicks = pickBalanced()
+  document.getElementById('family-grid').innerHTML = galleryPicks.map((p, i) => `
+    <button onclick="openLightbox(${i})" aria-label="View photo: ${p.alt}"
+      class="rounded-2xl overflow-hidden aspect-square brand-card group relative cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1a6fb5]"
+      style="border:1px solid #dce8f2;">
+      <img loading="lazy" src="images/family/${p.file}" alt="${p.alt}"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+      <div class="absolute inset-0 rounded-2xl flex items-end"
+        style="background:linear-gradient(to top,rgba(13,45,82,0.55) 0%,transparent 55%);opacity:0;transition:opacity .3s"
+        onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0'">
+        <p class="text-white text-xs font-medium px-3 pb-3 leading-tight">${p.alt}</p>
+      </div>
+    </button>`).join('')
+}
+
+function shuffleGallery() {
+  const icon = document.getElementById('shuffle-icon')
+  icon.style.transform = 'rotate(180deg)'
+  setTimeout(() => { icon.style.transform = ''; renderGallery() }, 350)
+}
+
+function openLightbox(i) {
+  lightboxIndex = i
+  updateLightbox()
+  document.getElementById('lightbox').classList.remove('hidden')
+  document.body.style.overflow = 'hidden'
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.add('hidden')
+  document.body.style.overflow = ''
+}
+
+function updateLightbox() {
+  const p = galleryPicks[lightboxIndex]
+  document.getElementById('lightbox-img').src = `images/family/${p.file}`
+  document.getElementById('lightbox-img').alt = p.alt
+  document.getElementById('lightbox-caption').textContent = p.alt
+  document.getElementById('lightbox-counter').textContent = `${lightboxIndex + 1} of ${galleryPicks.length}`
+}
+
+function lightboxNext() { lightboxIndex = (lightboxIndex + 1) % galleryPicks.length; updateLightbox() }
+function lightboxPrev() { lightboxIndex = (lightboxIndex - 1 + galleryPicks.length) % galleryPicks.length; updateLightbox() }
+
+document.addEventListener('keydown', e => {
+  if (document.getElementById('lightbox').classList.contains('hidden')) return
+  if (e.key === 'Escape')     closeLightbox()
+  if (e.key === 'ArrowRight') lightboxNext()
+  if (e.key === 'ArrowLeft')  lightboxPrev()
+})
+
+renderGallery()
   </script>
 </body>
 </html>
