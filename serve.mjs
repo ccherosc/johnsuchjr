@@ -15,6 +15,7 @@ const MIME = {
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
   '.svg': 'image/svg+xml',
   '.pdf': 'application/pdf',
   '.ico': 'image/x-icon',
@@ -22,23 +23,31 @@ const MIME = {
   '.woff': 'font/woff',
 }
 
+const CACHE = {
+  '.html': 'no-cache',
+  '.pdf':  'no-cache',
+}
+
+const IMMUTABLE = new Set(['.png', '.jpg', '.jpeg', '.webp', '.woff2', '.woff', '.ico'])
+
 createServer(async (req, res) => {
   const urlPath = req.url === '/' ? '/index.html' : decodeURIComponent(req.url.split('?')[0])
   const filePath = join(__dirname, urlPath)
   if (!filePath.startsWith(__dirname)) {
-    res.writeHead(403); res.end('Forbidden'); return;
+    res.writeHead(403); res.end('Forbidden'); return
   }
   try {
     const data = await readFile(filePath)
-    res.writeHead(200, { 'Content-Type': MIME[extname(filePath)] || 'application/octet-stream' })
+    const ext  = extname(filePath)
+    const headers = {
+      'Content-Type': MIME[ext] || 'application/octet-stream',
+      'Cache-Control': CACHE[ext] ?? (IMMUTABLE.has(ext) ? 'public, max-age=31536000, immutable' : 'public, max-age=3600'),
+    }
+    if (ext === '.pdf') headers['Content-Disposition'] = 'inline'
+    res.writeHead(200, headers)
     res.end(data)
   } catch (e) {
-    if (e.code === 'ENOENT') {
-      res.writeHead(404)
-      res.end('Not found')
-    } else {
-      res.writeHead(500)
-      res.end('Server error')
-    }
+    if (e.code === 'ENOENT') { res.writeHead(404); res.end('Not found') }
+    else                     { res.writeHead(500); res.end('Server error') }
   }
 }).listen(PORT, () => console.log(`Serving at http://localhost:${PORT}`))
