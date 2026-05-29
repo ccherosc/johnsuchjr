@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Such Jr. — Resume</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; color: #1a2940; background: #f4f8fc; margin: 0; }
+    .playfair { font-family: 'Playfair Display', serif; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white; }
+      .resume-card { box-shadow: none !important; border: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="no-print sticky top-0 z-10 flex items-center justify-between px-6 py-3" style="background:#0d2d52;">
+    <a href="/" class="text-white/80 text-sm hover:text-white transition-colors flex items-center gap-2">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to johnsuchjr.com
+    </a>
+    <div class="flex gap-3">
+      <button onclick="window.print()" class="text-white/80 text-sm hover:text-white transition-colors flex items-center gap-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print
+      </button>
+      <a href="assets/John Such 2026 Resume.pdf" download class="bg-[#1a6fb5] text-white text-sm font-medium px-4 py-1.5 rounded-full hover:bg-[#1558a0] transition-colors flex items-center gap-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF
+      </a>
+    </div>
+  </div>
+
+  <!-- Resume card -->
+  <div class="max-w-4xl mx-auto px-4 py-10 resume-card">
+    <div class="bg-white rounded-2xl overflow-hidden" style="box-shadow:0 4px 40px rgba(13,45,82,0.10);">
+
+      <!-- Header -->
+      <div class="px-10 pt-10 pb-8" style="background:linear-gradient(135deg,#0d2d52 0%,#0f3565 100%);">
+        <h1 class="playfair text-white mb-1" style="font-size:2.4rem;letter-spacing:-0.02em;">John Such</h1>
+        <p class="text-[#94c3e0] text-base mb-4">Simpsonville, SC &nbsp;·&nbsp; 864.581.1825 &nbsp;·&nbsp; john.such@tdsynnex.com</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://www.linkedin.com/in/johnsuchjr/" target="_blank" rel="noopener" class="text-[#60a5d4] text-sm hover:text-white transition-colors">LinkedIn →</a>
+          <span class="text-white/20">|</span>
+          <a href="/" class="text-[#60a5d4] text-sm hover:text-white transition-colors">johnsuchjr.com →</a>
+        </div>
+      </div>
+
+      <div class="px-10 py-8 space-y-10">
+
+        <!-- Executive Summary -->
+        <section>
+          <h2 class="playfair text-[#0d2d52] text-xl mb-3" style="letter-spacing:-0.01em;">Executive Summary</h2>
+          <div class="w-10 h-0.5 rounded-full mb-4" style="background:#1a6fb5;"></div>
+          <p class="text-[#4a6a82] leading-relaxed">Channel marketing and business strategy leader with 25+ years of experience across sales, marketing, analytics, consulting, and digital transformation in the technology channel. Proven track record of building revenue-generating programs, leading cross-functional teams, translating data into strategy, and launching new capabilities across distributors, vendors, resellers, and internal stakeholders. Combines enterprise scale, entrepreneurial thinking, and deep institutional knowledge to drive growth and operational improvement.</p>
+        </section>
+
+        <!-- Experience -->
+        <section>
+          <h2 class="playfair text-[#0d2d52] text-xl mb-3" style="letter-spacing:-0.01em;">Professional Experience</h2>
+          <div class="w-10 h-0.5 rounded-full mb-6" style="background:#1a6fb5;"></div>
+
+          <div class="space-y-8">
+
+            <!-- TD SYNNEX -->
+            <div>
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+                <h3 class="text-[#0d2d52] font-semibold text-base">TD SYNNEX / SYNNEX Corporation</h3>
+              </div>
+
+              <div class="mb-3">
+                <div class="flex flex-wrap items-center justify-between gap-1">
+                  <span class="text-[#1a6fb5] font-medium text-sm">Senior Project Manager</span>
+                  <span class="text-[#6b8fa8] text-xs">December 2024 – Present</span>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
+                  <span class="text-[#1a6fb5] font-medium text-sm">Marketing Manager</span>
+                  <span class="text-[#6b8fa8] text-xs">June 2010 – December 2024</span>
+                </div>
+                <ul class="space-y-2 text-[#4a6a82] text-sm leading-relaxed">
+                  <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Leading the development of a comprehensive <strong class="text-[#0d2d52]">AI-driven marketing management platform</strong> (blueprint) covering planning, execution, and claims, projected to drive <strong class="text-[#0d2d52]">38,575 hours of efficiency and $1.3M in savings</strong>.</span></li>
+                  <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Identified and developed <strong class="text-[#0d2d52]">30+ generative AI use cases</strong> for marketing in the technology's early mainstream phase, helping shape early NexChat direction.</span></li>
+                  <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Conceived and launched experiential platforms including World of Inspiration and a VR 3D/2D showroom for HPI/HPE, generating <strong class="text-[#0d2d52]">$2M+ in program revenue</strong>.</span></li>
+                  <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Built and led a digital marketing practice that generated <strong class="text-[#0d2d52]">$2M+ in first-year revenue</strong> and contributed <strong class="text-[#0d2d52]">$6M in digital growth by 2020</strong>.</span></li>
+                  <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Led ten marketing specialists and analytics resources supporting VISUALSolv, CLOUDSolv, CONVERGESolv, STORESolv, SERVICESolv, and RENEWSolv.</span></li>
+                  <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Partnered with the Marketing SVP and CEO to deliver a FIRST Robotics event for 80+ executives, driving sponsorships and a first-ever <strong class="text-[#0d2d52]">STEM for Girls</strong> event with 200+ girls in attendance.</span></li>
+                  <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Authored the first <em>Vendor Guide to U.S. Marketing</em>, which became an annual flagship planning resource for eight years.</span></li>
+                  <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Built and scaled revenue-generating sales-hybrid programs, including <strong class="text-[#0d2d52]">RENEWSolv growth from $15K to $350K</strong>.</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="border-t" style="border-color:#dce8f2;"></div>
+
+            <!-- SYNNEX Senior Marketing Specialist -->
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-1 mb-3">
+                <div>
+                  <h3 class="text-[#0d2d52] font-semibold text-base">SYNNEX Corporation</h3>
+                  <span class="text-[#1a6fb5] font-medium text-sm">Senior Marketing Specialist</span>
+                </div>
+                <span class="text-[#6b8fa8] text-xs">May 2007 – June 2010</span>
+              </div>
+              <ul class="space-y-2 text-[#4a6a82] text-sm leading-relaxed">
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Co-developed a landmark <strong class="text-[#0d2d52]">$1.2M PRINTSolv plan</strong> for HP, including solution architects, dedicated sales support, and custom reseller enablement packages.</span></li>
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Initiated the company's first content management system, moving the business from basic HTML/JavaScript to a scalable CMS framework.</span></li>
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Negotiated the transition from D&amp;B to Equifax, generating <strong class="text-[#0d2d52]">$600K+ in savings</strong>.</span></li>
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Partnered with the SVP of Sales to create Beyond Distribution, strengthening sales team and customer understanding of company-wide value.</span></li>
+              </ul>
+            </div>
+
+            <div class="border-t" style="border-color:#dce8f2;"></div>
+
+            <!-- DecisiveLogic -->
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-1 mb-3">
+                <div>
+                  <h3 class="text-[#0d2d52] font-semibold text-base">DecisiveLogic / MarketMatters LLC</h3>
+                  <span class="text-[#1a6fb5] font-medium text-sm">Founder / Marketing Consultant</span>
+                </div>
+                <span class="text-[#6b8fa8] text-xs">January 2006 – May 2007</span>
+              </div>
+              <ul class="space-y-2 text-[#4a6a82] text-sm leading-relaxed">
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Crafted a reseller enablement program for ScanSource and built a Cisco competitive marketing plan generating <strong class="text-[#0d2d52]">$100K+ in marketing revenue</strong>.</span></li>
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Led comprehensive brand strategy for PrimeLine Communications and Priority One Security — both brands still in use.</span></li>
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Developed an early Marketing-as-a-Service consulting model for small businesses using weekly and monthly retainer support.</span></li>
+              </ul>
+            </div>
+
+            <div class="border-t" style="border-color:#dce8f2;"></div>
+
+            <!-- SYNNEX Marketing Specialist -->
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-1 mb-3">
+                <div>
+                  <h3 class="text-[#0d2d52] font-semibold text-base">SYNNEX Corporation</h3>
+                  <span class="text-[#1a6fb5] font-medium text-sm">Marketing Specialist</span>
+                </div>
+                <span class="text-[#6b8fa8] text-xs">March 2003 – January 2006</span>
+              </div>
+              <ul class="space-y-2 text-[#4a6a82] text-sm leading-relaxed">
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Became the first Marketing Specialist to <strong class="text-[#0d2d52]">generate $1M in quarterly marketing funding</strong> across HP Hardcopy, Supplies, and Services.</span></li>
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Created a data-driven communication model and predecessor to PACE.</span></li>
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Launched the first Follow the Supplies initiative, resulting in hundreds of thousands of dollars in refreshed printer sales.</span></li>
+              </ul>
+            </div>
+
+            <div class="border-t" style="border-color:#dce8f2;"></div>
+
+            <!-- SYNNEX Sales -->
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-1 mb-3">
+                <div>
+                  <h3 class="text-[#0d2d52] font-semibold text-base">SYNNEX Information Technologies, Inc.</h3>
+                  <span class="text-[#1a6fb5] font-medium text-sm">Strategic Sales Representative</span>
+                </div>
+                <span class="text-[#6b8fa8] text-xs">December 2000 – March 2003</span>
+              </div>
+              <ul class="space-y-2 text-[#4a6a82] text-sm leading-relaxed">
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Managed major strategic accounts including Siemens Medical Solutions, GBS, and CDS Office Technologies.</span></li>
+                <li class="flex gap-2"><span class="text-[#1a6fb5] mt-1 flex-shrink-0">›</span><span>Closed a landmark <strong class="text-[#0d2d52]">$2.1M Panasonic deal</strong> with CDS Office Technologies at over 4% profit margin.</span></li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+          <h2 class="playfair text-[#0d2d52] text-xl mb-3" style="letter-spacing:-0.01em;">Education</h2>
+          <div class="w-10 h-0.5 rounded-full mb-4" style="background:#1a6fb5;"></div>
+          <div class="flex flex-wrap items-start justify-between gap-2">
+            <div>
+              <p class="text-[#0d2d52] font-semibold">Bachelor of Science in Marketing Management</p>
+              <p class="text-[#4a6a82] text-sm">Lander University — Greenwood, SC</p>
+            </div>
+            <span class="text-[#6b8fa8] text-sm">1999</span>
+          </div>
+        </section>
+
+        <!-- Career Highlights strip -->
+        <section>
+          <h2 class="playfair text-[#0d2d52] text-xl mb-3" style="letter-spacing:-0.01em;">Career Highlights</h2>
+          <div class="w-10 h-0.5 rounded-full mb-6" style="background:#1a6fb5;"></div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="rounded-xl p-4 text-center" style="background:#f4f8fc;border:1px solid #dce8f2;">
+              <div class="playfair text-[#0d2d52] font-bold text-2xl">25+</div>
+              <div class="text-[#6b8fa8] text-xs mt-1">Years Experience</div>
+            </div>
+            <div class="rounded-xl p-4 text-center" style="background:#f4f8fc;border:1px solid #dce8f2;">
+              <div class="playfair text-[#1a6fb5] font-bold text-2xl">$2M+</div>
+              <div class="text-[#6b8fa8] text-xs mt-1">First-Year Digital Revenue</div>
+            </div>
+            <div class="rounded-xl p-4 text-center" style="background:#f4f8fc;border:1px solid #dce8f2;">
+              <div class="playfair text-[#1a6fb5] font-bold text-2xl">$6M</div>
+              <div class="text-[#6b8fa8] text-xs mt-1">Digital Growth by 2020</div>
+            </div>
+            <div class="rounded-xl p-4 text-center" style="background:#f4f8fc;border:1px solid #dce8f2;">
+              <div class="playfair text-[#1a6fb5] font-bold text-2xl">38K+</div>
+              <div class="text-[#6b8fa8] text-xs mt-1">AI Efficiency Hours</div>
+            </div>
+            <div class="rounded-xl p-4 text-center" style="background:#f4f8fc;border:1px solid #dce8f2;">
+              <div class="playfair text-[#1a6fb5] font-bold text-2xl">$1.3M</div>
+              <div class="text-[#6b8fa8] text-xs mt-1">AI Savings Projected</div>
+            </div>
+            <div class="rounded-xl p-4 text-center" style="background:#f4f8fc;border:1px solid #dce8f2;">
+              <div class="playfair text-[#1a6fb5] font-bold text-2xl">$350K</div>
+              <div class="text-[#6b8fa8] text-xs mt-1">RENEWSolv Growth</div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Footer -->
+      <div class="px-10 py-6 flex flex-wrap items-center justify-between gap-4" style="background:#f4f8fc;border-top:1px solid #dce8f2;">
+        <p class="text-[#6b8fa8] text-sm">johnsuchjr.com &nbsp;·&nbsp; Simpsonville, SC</p>
+        <a href="assets/John Such 2026 Resume.pdf" download class="bg-[#1a6fb5] text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-[#1558a0] transition-colors flex items-center gap-2 no-print">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
