@@ -458,7 +458,219 @@
     </div>
   </div>
 </section>
-  <!-- FAQ placeholder — replaced in Task 10 -->
+  <!-- ==================== FAQ ==================== -->
+<section id="faq" style="background:#f4f8fc;" class="py-24">
+  <div class="max-w-4xl mx-auto px-6">
+    <p class="text-[#1a6fb5] text-xs font-medium uppercase tracking-[0.18em] mb-3">Frequently Asked</p>
+    <h2 class="playfair text-[#0d2d52] mb-4" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">Questions I Get Asked a Lot</h2>
+    <div class="w-14 h-1 rounded-full mb-4" style="background:#1a6fb5;"></div>
+    <p class="text-[#4a6a82] text-lg mb-12">Answered like a human.</p>
+
+    <div class="space-y-3" id="faq-list">
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">Tell me about yourself.</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">I've spent 25+ years helping companies explain complicated technology to the people who need to use it. Started in sales, moved into marketing, built a consulting practice, came back, never stopped building things on the side. The thread is always the same: technology, communication, and the humans trying to figure out what to do with both.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What do you actually do for work?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Channel marketing inside the technology industry. I sit in the middle of a massive ecosystem — vendors, distributors, resellers, partners — and help make sense of it. Programs that drive revenue. Platforms that create efficiency. Plans that translate into action. Less flashy than it sounds. More important than most people realize.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">How do you explain AI to people who are scared of it?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">I tell them it's not going to replace them. It's going to replace the parts of their job they hate — the repetitive stuff, the first drafts, the formatting, the summaries. What it can't replace is judgment, relationships, and the ability to ask the right question. That's where the real work lives.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What's the best career advice you've ever gotten?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Stop trying to look like you know what you're doing and start focusing on actually knowing what you're doing. The reputation follows. Not the other way around.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">How did you get into marketing?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Started in sales. Got tired of pitching things without being able to shape the story first. Marketing let me do that. Eventually I realized the story wasn't just a part of the business — it was the whole game.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What does a typical workday look like for you?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">A mix of strategic planning, cross-functional coordination, writing, reviewing data, and figuring out what actually needs to happen versus what people think needs to happen. There's always a gap between those two things. That gap is usually where the real work is.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What's one thing you wish you'd done earlier in your career?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Built my own projects sooner. I spent years helping other companies build things and didn't put the same energy into my own ideas until later. Don't wait for permission. Nobody's coming to give it to you.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">How do you stay current with AI and tech?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">I actually use it. Not just read about it. I'm building workflows, testing tools, running experiments, and regularly failing at things. Reading about AI is fine. Building something with it is a different education entirely.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What's your leadership style?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Clear on the goal, out of the way on execution. I push back when something doesn't add up. I ask a lot of questions. I care about the work and expect the same. If you need me to define every step for you, we're going to have a hard time.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What kind of problems do you like to solve?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">The ones where the answer isn't obvious yet. Where you have to connect dots from different directions, bring in the right people, and build something that didn't exist before. I'm not great at problems that are already solved. I'm much better at the first version of something new.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">How do you balance work and family?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Imperfectly. Intentionally. I have two boys and a wife who handles a lot of half-finished ideas with grace. We protect the important stuff — dinner, weekends when possible, being present instead of just nearby. Work will always ask for more than you can give it. You have to decide what the floor is before it gets decided for you.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What projects are you most proud of?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Professionally: building a digital marketing practice that generated $2M in year one, and the AI platform I'm working on now that's projected to save real hours and real money. Personally: Art's Dominos, because it's built around family culture and still makes me smile every time I play it.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What tools do you use every day?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Claude, ChatGPT, Cursor, VS Code, Google Workspace. The AI tools are doing real work now — not impressive demos. If you're not actively using them, you're already behind.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">How do you think about building a personal brand?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">I don't think of it as a brand. I think of it as showing what you actually believe, consistently, over time. The people who do this well aren't performing — they're just sharing a real perspective and letting the reputation accumulate on its own.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What does success look like to you?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Building things that matter to people I respect. Work that's hard enough to stay interesting. Enough margin in life to be present for my family. Not being the smartest person in the room — but being useful in it.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What's your approach to learning new skills?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Build something with it. I don't learn well from courses alone. I learn by doing something real and hitting the wall. The understanding lives on the other side of where it stopped working.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">How do you handle a project that isn't working?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Stop first. Figure out why — is it the strategy, the execution, or the premise? Those are three different problems with three different fixes. Most people try to fix execution when the premise was wrong from the start. Diagnose before you solve.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What do you look for in a great team?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Curious people who argue well. Who push back with evidence, not just opinions. Who can disagree and still move. Who care about the outcome more than being right. That combination is rarer than it should be and worth more than almost anything else.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">Where do you see AI going in the next five years?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">Deeper into work that used to require whole teams. Not replacing judgment, but compressing the gap between idea and output. The companies that learn to use it as leverage — not just cost reduction — will look completely different from the ones that don't. Five years is going to feel like a decade.</p>
+        </div>
+      </div>
+
+      <div class="faq-item brand-card bg-white rounded-2xl overflow-hidden" style="border:1px solid #dce8f2;">
+        <button class="faq-trigger w-full text-left px-6 py-5 flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+          <span class="text-[#0d2d52] font-semibold text-base">What's something most people don't know about you?</span>
+          <span class="faq-icon text-[#1a6fb5] text-xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-[#4a6a82] leading-relaxed">I love history. Not in a textbook way — in a "why did people make the choices they made, and what does that tell us about right now" way. Ancient civilizations, medieval culture, biblical history, Renaissance fairs. I find it all genuinely fascinating. Same instinct as the tech stuff, just pointed backwards instead of forward.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
   <!-- FOOTER placeholder — replaced in Task 11 -->
 
   <!-- ==================== FLOATING SOCIAL SIDEBAR (desktop) ==================== -->
