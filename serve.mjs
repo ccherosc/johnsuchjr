@@ -23,7 +23,7 @@ const MIME = {
 }
 
 createServer(async (req, res) => {
-  const urlPath = req.url === '/' ? '/index.html' : req.url.split('?')[0]
+  const urlPath = req.url === '/' ? '/index.html' : decodeURIComponent(req.url.split('?')[0])
   const filePath = join(__dirname, urlPath)
   if (!filePath.startsWith(__dirname)) {
     res.writeHead(403); res.end('Forbidden'); return;
