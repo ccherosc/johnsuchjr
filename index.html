@@ -1046,6 +1046,17 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft')  lightboxPrev()
 })
 
+let touchStartX = 0
+const lightboxEl = document.getElementById('lightbox')
+lightboxEl.addEventListener('touchstart', e => {
+  touchStartX = e.touches[0].clientX
+}, { passive: true })
+lightboxEl.addEventListener('touchend', e => {
+  const delta = e.changedTouches[0].clientX - touchStartX
+  if (Math.abs(delta) < 50) return
+  delta < 0 ? lightboxNext() : lightboxPrev()
+})
+
 renderGallery()
   </script>
 </body>
