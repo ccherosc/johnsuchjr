@@ -13,6 +13,9 @@ const projects = [
   { slug: 'artsdominos',       url: 'https://ccherosc.github.io/ArtsDominos-v2/' },
   { slug: 'angln',             url: 'https://www.angln.com' },
   { slug: 'buzzardroost',      url: 'https://buzzard-roost-daily-cast-v2.pages.dev/' },
+  { slug: 'pixelant',         url: 'https://pixelant.netlify.app' },
+  { slug: 'skywriter',        url: 'https://skywriter.netlify.app' },
+  { slug: 'dungeonsweeper',   url: 'https://dsweep.netlify.app' },
 ]
 
 const outDir = join(__dirname, 'images', 'projects')
