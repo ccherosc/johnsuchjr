@@ -930,41 +930,41 @@ function toggleFaq(trigger) {
 // --- Family Gallery ---
 const FAMILY_PHOTOS = [
   { file: 'such-family-thanksgiving-gathering-2024.webp',   cat: 'family', alt: 'Such family Thanksgiving gathering 2024' },
-  { file: 'john-yve-renaissance-faire-costumes.webp',       cat: 'couple', alt: 'John and Yve at Renaissance Faire in costume' },
+  { file: 'john-yve-renaissance-faire-costumes.webp',       cat: 'couple', alt: 'John and Yve at Renaissance Faire in costume', pos: '50% 10%' },
   { file: 'such-family-destin-florida-beach-vacation.webp', cat: 'family', alt: 'Such family beach vacation in Destin, Florida' },
   { file: 'john-such-son-prom-garden.webp',                 cat: 'family', alt: 'John Such and son before prom' },
   { file: 'john-such-jetski-marina-fistbump.webp',          cat: 'family', alt: 'John Such and son fist-bumping on jet skis' },
   { file: 'john-such-son-birthday-celebration.webp',        cat: 'family', alt: 'John Such and son at birthday celebration' },
   { file: 'john-such-friends-night-out.webp',               cat: 'family', alt: 'John Such with family and friends' },
-  { file: 'john-such-black-belt-upstate-karate.webp',       cat: 'family', alt: 'John Such earning his black belt at Upstate Karate' },
+  { file: 'john-such-black-belt-upstate-karate.webp',       cat: 'family', alt: 'John Such earning his black belt at Upstate Karate', pos: '50% 10%' },
   { file: 'such-family-outdoor-restaurant-gathering.webp',  cat: 'family', alt: 'Such family gathering at an outdoor restaurant' },
   { file: 'yve-such-renaissance-faire-face-paint.webp',     cat: 'couple', alt: 'Yve Such with face paint at Renaissance Faire' },
   { file: 'john-yve-renaissance-faire-dragon.webp',         cat: 'couple', alt: 'John and Yve with a dragon costumed performer at Renaissance Faire' },
   { file: 'such-family-restaurant-silly-selfie.webp',       cat: 'family', alt: 'Such family silly selfie at a restaurant' },
   { file: 'bryson-such-chess-game.webp',                    cat: 'kids',   alt: 'Bryson Such focused on a chess game' },
-  { file: 'john-such-halloween-beetlejuice.webp',           cat: 'family', alt: 'John Such in a Beetlejuice Halloween costume' },
+  { file: 'john-such-halloween-beetlejuice.webp',           cat: 'family', alt: 'John Such in a Beetlejuice Halloween costume', pos: '50% 10%' },
   { file: 'john-yve-brit-floyd-concert-2023.webp',          cat: 'couple', alt: 'John and Yve at Brit Floyd concert 2023' },
   { file: 'john-yve-halloween-mask-shopping.webp',          cat: 'couple', alt: 'John and Yve trying on Halloween masks' },
   { file: 'john-yve-lake-boat-day.webp',                    cat: 'couple', alt: 'John and Yve on the lake on a boat day' },
   { file: 'jt-such-largemouth-bass-fishing.webp',           cat: 'kids',   alt: 'JT Such with a largemouth bass on a fishing boat' },
   { file: 'bryson-such-thanksgiving-turkey-hat.webp',       cat: 'kids',   alt: 'Bryson Such wearing a turkey hat at Thanksgiving' },
   { file: 'jt-bryson-such-outdoors-with-friends.webp',      cat: 'kids',   alt: 'JT and Bryson Such outdoors with friends' },
-  { file: 'john-yve-such-date-night-dressed-up.webp',       cat: 'couple', alt: 'John and Yve Such dressed up for a date night' },
-  { file: 'john-such-son-prom-outdoor-portrait.webp',       cat: 'family', alt: 'John Such with son at prom outdoor portrait' },
+  { file: 'john-yve-such-date-night-dressed-up.webp',       cat: 'couple', alt: 'John and Yve Such dressed up for a date night', pos: '50% 10%' },
+  { file: 'john-such-son-prom-outdoor-portrait.webp',       cat: 'family', alt: 'John Such with son at prom outdoor portrait', pos: '50% 10%' },
   { file: 'john-such-portrait-headshot.webp',               cat: 'family', alt: 'John Such portrait' },
   { file: 'jt-bryson-such-brothers-indoor.webp',            cat: 'kids',   alt: 'JT and Bryson Such brothers together' },
   { file: 'john-yve-such-christmas-plaza.webp',             cat: 'couple', alt: 'John and Yve Such at the Christmas plaza' },
   { file: 'john-jt-bryson-such-arcade-fun.webp',            cat: 'family', alt: 'John, JT, and Bryson Such having fun at the arcade' },
-  { file: 'john-such-sons-deck-outdoor.webp',               cat: 'family', alt: 'John Such with his sons on the outdoor deck' },
+  { file: 'john-such-sons-deck-outdoor.webp',               cat: 'family', alt: 'John Such with his sons on the outdoor deck', pos: '50% 10%' },
   { file: 'john-yve-such-outdoor-park-evening.webp',        cat: 'couple', alt: 'John and Yve Such relaxing in the park' },
   { file: 'john-bryson-such-golf-course.webp',              cat: 'family', alt: 'John and Bryson Such at the golf course' },
   { file: 'such-grandparents-outdoor-portrait.webp',        cat: 'family', alt: 'Such family grandparents outdoor portrait' },
   { file: 'john-jt-such-boat-marina-summer.webp',           cat: 'family', alt: 'John and JT Such on a boat at the marina' },
-  { file: 'john-yve-such-halloween-costumes.webp',          cat: 'couple', alt: 'John and Yve Such in Halloween costumes' },
-  { file: 'john-such-festival-performer-fun.webp',          cat: 'family', alt: 'John Such with a festive costume performer' },
+  { file: 'john-yve-such-halloween-costumes.webp',          cat: 'couple', alt: 'John and Yve Such in Halloween costumes', pos: '50% 10%' },
+  { file: 'john-such-festival-performer-fun.webp',          cat: 'family', alt: 'John Such with a festive costume performer', pos: '50% 15%' },
   { file: 'jt-bryson-such-young-boys-throwback.webp',       cat: 'kids',   alt: 'JT and Bryson Such as young boys throwback photo' },
   { file: 'such-grandparents-80th-birthday.webp',           cat: 'family', alt: 'Such grandparents celebrating 80th birthday' },
-  { file: 'jt-bryson-such-beach-pier-fishing.webp',         cat: 'kids',   alt: 'JT and Bryson Such fishing on the beach pier' },
+  { file: 'jt-bryson-such-beach-pier-fishing.webp',         cat: 'kids',   alt: 'JT and Bryson Such fishing on the beach pier', pos: '50% 10%' },
 ]
 
 function shuffleArr(arr) {
@@ -1001,7 +1001,8 @@ function renderGallery() {
       class="rounded-2xl overflow-hidden aspect-square brand-card group relative cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1a6fb5]"
       style="border:1px solid #dce8f2;">
       <img loading="lazy" src="images/family/${p.file}" alt="${p.alt}"
-        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        style="object-position:${p.pos||'center'}">
       <div class="absolute inset-0 rounded-2xl flex items-end"
         style="background:linear-gradient(to top,rgba(13,45,82,0.55) 0%,transparent 55%);opacity:0;transition:opacity .3s"
         onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0'">
