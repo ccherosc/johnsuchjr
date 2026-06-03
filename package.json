@@ -1,22 +1,21 @@
 {
-  "name": "project_johnsuchjr",
+  "name": "johnsuchjr",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "description": "Personal brand site for johnsuchjr.com — futurist, marketer, builder.",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node serve.mjs",
+    "check": "node scripts/check-site.mjs",
+    "test": "npm run check"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "puppeteer": "^25.1.0"
-  },
-  "devDependencies": {
-    "sharp": "^0.34.5"
-  }
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "static-site",
+    "marketing",
+    "ai"
+  ],
+  "author": "John Such Jr.",
+  "license": "ISC"
 }
