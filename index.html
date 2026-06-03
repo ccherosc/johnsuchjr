@@ -58,7 +58,24 @@
       section { scroll-margin-top: 64px; }
     }
     @media (min-width: 768px) {
-      section { scroll-margin-top: 72px; }
+      section { scroll-margin-top: 88px; }
+    }
+    @media (min-width: 1024px) {
+      #desktop-nav .nav-link,
+      #desktop-nav a[download] {
+        font-size: 0.98rem;
+      }
+      .section-copy {
+        font-size: 1.16rem;
+        line-height: 1.9;
+      }
+      .section-intro {
+        font-size: 1.22rem;
+        line-height: 1.75;
+      }
+      h2.section-heading {
+        font-size: clamp(2.35rem, 3.3vw, 3.35rem) !important;
+      }
     }
   </style>
   <script type="application/ld+json">
@@ -97,9 +114,9 @@
 
   <!-- ==================== NAVIGATION ==================== -->
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background: transparent;">
-  <div class="max-w-6xl mx-auto px-6 flex items-center justify-between" style="height:72px;">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8 flex items-center justify-between" style="height:clamp(82px,8vw,96px);">
     <a href="#hero" class="flex-shrink-0">
-      <img src="images/JohnSuchJrLogo1.webp" alt="JohnSuchJr.com" class="h-20" id="nav-logo" style="filter: brightness(0) invert(1);">
+      <img src="images/JohnSuchJrLogo1.webp" alt="JohnSuchJr.com" id="nav-logo" style="height:clamp(54px,6vw,82px);filter: brightness(0) invert(1);">
     </a>
     <div class="hidden md:flex items-center gap-6" id="desktop-nav">
       <a href="#about"    class="nav-link text-white/80 text-sm font-medium hover:text-white transition-colors">About</a>
@@ -138,22 +155,22 @@
 </nav>
   <!-- ==================== HERO ==================== -->
 <main>
-<section id="hero" class="relative min-h-screen flex items-center overflow-hidden" style="background: linear-gradient(135deg, #0d2d52 0%, #091e38 45%, #0f3565 100%);">
+<section id="hero" class="relative flex items-center overflow-hidden" style="min-height:min(820px,84vh);background: linear-gradient(135deg, #0d2d52 0%, #091e38 45%, #0f3565 100%);">
   <!-- Radial glow blobs -->
   <div class="absolute" style="width:600px;height:600px;top:-100px;right:-100px;background:radial-gradient(circle,rgba(26,111,181,0.18) 0%,transparent 70%);pointer-events:none;"></div>
   <div class="absolute" style="width:400px;height:400px;bottom:-80px;left:10%;background:radial-gradient(circle,rgba(26,111,181,0.12) 0%,transparent 70%);pointer-events:none;"></div>
   <!-- Grain texture -->
   <div class="absolute inset-0 opacity-30 pointer-events-none" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22/><feColorMatrix type=%22saturate%22 values=%220%22/></filter><rect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%220.08%22/></svg>');background-size:200px 200px;"></div>
 
-  <div class="relative z-10 max-w-6xl mx-auto px-6 py-28 md:py-32 grid md:grid-cols-2 gap-12 items-center w-full">
+  <div class="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-8 py-20 md:py-24 lg:py-20 grid md:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-16 items-center w-full">
     <!-- Left: Text -->
     <div>
-      <p class="text-[#60a5d4] text-xs font-medium uppercase tracking-[0.18em] mb-5">Welcome to johnsuchjr.com</p>
-      <h1 class="playfair text-white mb-6 leading-[1.08]" style="font-size:clamp(2.8rem,5.5vw,4.2rem);letter-spacing:-0.03em;">
+      <p class="text-[#60a5d4] text-sm md:text-base font-medium uppercase tracking-[0.18em] mb-5">Welcome to johnsuchjr.com</p>
+      <h1 class="playfair text-white mb-6 leading-[1.02]" style="font-size:clamp(3.4rem,5vw,5.5rem);letter-spacing:-0.04em;">
         Futurist.<br>Marketer.<br>Builder.
       </h1>
-      <div class="w-14 h-1 rounded-full mb-6" style="background:#1a6fb5;"></div>
-      <p class="text-[#94c3e0] text-lg leading-relaxed mb-8 max-w-md">
+      <div class="w-16 h-1 rounded-full mb-7" style="background:#1a6fb5;"></div>
+      <p class="text-[#94c3e0] text-xl md:text-[1.45rem] leading-relaxed mb-9 max-w-xl">
         25+ years at the intersection of technology, marketing, and what's next. Based in Simpsonville, SC.
       </p>
       <div class="flex flex-wrap gap-4 mb-10">
@@ -180,8 +197,8 @@
 
     <!-- Right: Headshot -->
     <div class="flex justify-center md:justify-end">
-      <div class="relative" style="width:min(380px,80vw);height:min(420px,88vw);">
-        <div class="absolute inset-0 rounded-2xl" style="background:linear-gradient(135deg,#1a6fb5,#0d2d52);transform:rotate(3deg);opacity:0.6;"></div>
+    <div class="relative" style="width:min(500px,42vw);height:min(560px,46vw);min-width:min(360px,82vw);">
+<div class="absolute inset-0 rounded-2xl" style="background:linear-gradient(135deg,#1a6fb5,#0d2d52);transform:rotate(3deg);opacity:0.6;"></div>
         <img src="images/john-such.jpg" alt="John Such Jr."
           width="400" height="400"
           class="relative rounded-2xl w-full h-full object-cover object-top"
@@ -199,18 +216,18 @@
 </section>
   <!-- ==================== ABOUT ==================== -->
 <section id="about" class="py-24 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
     <p class="text-[#1a6fb5] text-xs font-medium uppercase tracking-[0.18em] mb-3">Who I Am</p>
-    <h2 class="playfair text-[#0d2d52] mb-6" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">About Me</h2>
+    <h2 class="playfair section-heading text-[#0d2d52] mb-6" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">About Me</h2>
     <div class="w-14 h-1 rounded-full mb-10" style="background:#1a6fb5;"></div>
 
     <div class="grid md:grid-cols-2 gap-12 mb-16 items-start">
-      <div class="text-[#4a6a82] text-lg leading-[1.8] space-y-5">
+      <div class="section-copy text-[#4a6a82] text-lg leading-[1.8] space-y-5">
         <p>I have always been drawn to the space between what was, what is, and what could be. I love history because it reminds us that people have always been figuring things out as they go. I love technology because it gives us new tools to solve old problems. I love AI because it feels like we are standing at the edge of something huge.</p>
         <p>I am not interested in technology for technology's sake. I am interested in what it can unlock. Can it help a small business look bigger than it is? Can it help a team do more with less? Can it take the repetitive work off someone's plate so they can actually think again?</p>
         <p>That is the part that fires me up.</p>
       </div>
-      <div class="text-[#4a6a82] text-lg leading-[1.8] space-y-5">
+      <div class="section-copy text-[#4a6a82] text-lg leading-[1.8] space-y-5">
         <p>My professional world lives inside the technology channel, where vendors, distributors, resellers, solution providers, and customers connect in this giant ecosystem that most people never see. It is not always flashy, but it is the plumbing behind a lot of what keeps modern business moving.</p>
         <p>Part futurist. Part marketer. Part storyteller. Part history nerd. Part dad. Part builder. Part guy who has too many ideas and not enough hours, but keeps going anyway.</p>
         <p>Welcome to johnsuchjr.com. Pull up a chair by the fire.</p>
@@ -218,7 +235,7 @@
     </div>
 
     <!-- Interests Grid -->
-    <h3 class="playfair text-[#0d2d52] text-2xl mb-8">Things I Care About</h3>
+    <h3 class="playfair section-heading text-[#0d2d52] text-2xl mb-8">Things I Care About</h3>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
       <div class="brand-card rounded-xl p-5 text-center hover:shadow-md transition-shadow" style="border:1px solid #dce8f2;">
         <div class="text-3xl mb-3">🤖</div>
@@ -257,11 +274,11 @@
 </section>
   <!-- ==================== CONNECT ==================== -->
 <section id="connect" style="background:#f4f8fc;" class="py-24">
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
     <p class="text-[#1a6fb5] text-xs font-medium uppercase tracking-[0.18em] mb-3">Find Me Online</p>
-    <h2 class="playfair text-[#0d2d52] mb-6" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">Let's Connect</h2>
+    <h2 class="playfair section-heading text-[#0d2d52] mb-6" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">Let's Connect</h2>
     <div class="w-14 h-1 rounded-full mb-10" style="background:#1a6fb5;"></div>
-    <p class="text-[#4a6a82] text-lg mb-12 max-w-xl">Find me where I actually spend time online. I share professional thinking on LinkedIn, connect personally on Facebook, and post moments on Instagram.</p>
+    <p class="section-intro text-[#4a6a82] text-lg mb-12 max-w-xl">Find me where I actually spend time online. I share professional thinking on LinkedIn, connect personally on Facebook, and post moments on Instagram.</p>
 
     <div class="grid sm:grid-cols-3 gap-6">
       <!-- LinkedIn -->
@@ -270,7 +287,7 @@
         <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style="background:#0077b5;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><use href="#icon-linkedin"/></svg>
         </div>
-        <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-1">LinkedIn</h3>
+        <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-1">LinkedIn</h3>
         <p class="text-[#6b8fa8] text-sm mb-3">johnsuchjr</p>
         <p class="text-[#4a6a82] text-sm leading-relaxed mb-5">Professional work, channel marketing, AI thinking, and career updates.</p>
         <span class="text-[#1a6fb5] text-sm font-medium">Visit Profile →</span>
@@ -282,7 +299,7 @@
         <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style="background:#1877f2;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><use href="#icon-facebook"/></svg>
         </div>
-        <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-1">Facebook</h3>
+        <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-1">Facebook</h3>
         <p class="text-[#6b8fa8] text-sm mb-3">john.such</p>
         <p class="text-[#4a6a82] text-sm leading-relaxed mb-5">Personal updates, family life, and the things that matter when the work is done.</p>
         <span class="text-[#1a6fb5] text-sm font-medium">Visit Profile →</span>
@@ -294,7 +311,7 @@
         <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><use href="#icon-instagram"/></svg>
         </div>
-        <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-1">Instagram</h3>
+        <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-1">Instagram</h3>
         <p class="text-[#6b8fa8] text-sm mb-3">ccherosc</p>
         <p class="text-[#4a6a82] text-sm leading-relaxed mb-5">Photos and moments from life, projects, and the occasional Renaissance faire.</p>
         <span class="text-[#1a6fb5] text-sm font-medium">Visit Profile →</span>
@@ -304,18 +321,18 @@
 </section>
   <!-- ==================== FAMILY ==================== -->
 <section id="family" class="py-24 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
     <p class="text-[#1a6fb5] text-xs font-medium uppercase tracking-[0.18em] mb-3">The Important Stuff</p>
-    <h2 class="playfair text-[#0d2d52] mb-6" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">Family &amp; Life</h2>
+    <h2 class="playfair section-heading text-[#0d2d52] mb-6" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">Family &amp; Life</h2>
     <div class="w-14 h-1 rounded-full mb-10" style="background:#1a6fb5;"></div>
 
     <div class="grid md:grid-cols-2 gap-12 items-start mb-14">
-      <div class="text-[#4a6a82] text-lg leading-[1.8] space-y-5">
+      <div class="section-copy text-[#4a6a82] text-lg leading-[1.8] space-y-5">
         <p>Some things matter more than the work. Yve is my wife and the grounding force that keeps this whole operation running with grace. She is patient, sharp, and better at most things than I give her credit for.</p>
         <p>JT and Bryson are my boys. They remind me every day why the future is worth thinking about. Watching them figure out the world is one of the best things I get to do.</p>
         <p>We are based in Simpsonville, South Carolina. Life here is good. The best parts of my day happen at home.</p>
       </div>
-      <div class="text-[#4a6a82] text-lg leading-[1.8] space-y-5">
+      <div class="section-copy text-[#4a6a82] text-lg leading-[1.8] space-y-5">
         <p>I try to keep work in its lane so there is space for the things that do not show up on a resume. Family dinners. Weekend adventures. Being present instead of just physically nearby.</p>
         <p>Not always perfect at it. Always trying.</p>
       </div>
@@ -366,11 +383,11 @@
 </div>
   <!-- ==================== RESUME ==================== -->
 <section id="resume" style="background:#f4f8fc;" class="py-24">
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
     <p class="text-[#1a6fb5] text-xs font-medium uppercase tracking-[0.18em] mb-3">Experience</p>
-    <h2 class="playfair text-[#0d2d52] mb-4" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">Resume &amp; Career</h2>
+    <h2 class="playfair section-heading text-[#0d2d52] mb-4" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">Resume &amp; Career</h2>
     <div class="w-14 h-1 rounded-full mb-6" style="background:#1a6fb5;"></div>
-    <p class="text-[#4a6a82] text-lg mb-8 max-w-xl">25+ years in the technology channel. Channel marketing, digital strategy, AI, and business development. Built programs. Grew revenue. Led teams. Never stopped building.</p>
+    <p class="section-intro text-[#4a6a82] text-lg mb-8 max-w-xl">25+ years in the technology channel. Channel marketing, digital strategy, AI, and business development. Built programs. Grew revenue. Led teams. Never stopped building.</p>
 
     <div class="flex flex-wrap gap-4 mb-12">
       <a href="assets/John Such 2026 Resume.pdf" download
@@ -389,7 +406,7 @@
     <!-- Career Highlight Stats -->
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
       <div class="brand-card bg-white rounded-2xl p-6 text-center" style="border:1px solid #dce8f2;">
-        <div class="playfair text-[#0d2d52] font-bold mb-1" style="font-size:2rem;">25+</div>
+        <div class="playfair section-heading text-[#0d2d52] font-bold mb-1" style="font-size:2rem;">25+</div>
         <div class="text-[#6b8fa8] text-sm">Years of Experience</div>
       </div>
       <div class="brand-card bg-white rounded-2xl p-6 text-center" style="border:1px solid #dce8f2;">
@@ -433,11 +450,11 @@
 </section>
   <!-- ==================== PROJECTS ==================== -->
 <section id="projects" class="py-24 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
     <p class="text-[#1a6fb5] text-xs font-medium uppercase tracking-[0.18em] mb-3">What I Build</p>
-    <h2 class="playfair text-[#0d2d52] mb-6" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">Projects</h2>
+    <h2 class="playfair section-heading text-[#0d2d52] mb-6" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">Projects</h2>
     <div class="w-14 h-1 rounded-full mb-6" style="background:#1a6fb5;"></div>
-    <p class="text-[#4a6a82] text-lg mb-12 max-w-2xl">Some people collect stamps. I collect ideas, half-built worlds, websites, experiments, and the occasional digital rabbit hole that turns into something real. Build it. Learn from it. Make it better. Keep moving.</p>
+    <p class="section-intro text-[#4a6a82] text-lg mb-12 max-w-2xl">Some people collect stamps. I collect ideas, half-built worlds, websites, experiments, and the occasional digital rabbit hole that turns into something real. Build it. Learn from it. Make it better. Keep moving.</p>
 
     <!-- Status legend -->
     <div class="flex gap-6 mb-10 text-sm text-[#6b8fa8]">
@@ -455,7 +472,7 @@
           <div class="absolute top-3 right-3 w-3.5 h-3.5 rounded-full border-2 border-white shadow" style="background:#eab308;"></div>
         </div>
         <div class="p-6">
-          <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-2">Show Me Results Only</h3>
+          <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-2">Show Me Results Only</h3>
           <p class="text-[#4a6a82] text-sm leading-relaxed mb-3">A practical marketing audit for small businesses. Stop drowning owners in vague language and show them what needs to be fixed first. No fluff. Just the stuff that moves the needle.</p>
           <span class="text-[#1a6fb5] text-sm font-medium">showmeresultsonly.com →</span>
         </div>
@@ -468,7 +485,7 @@
           <div class="absolute top-3 right-3 w-3.5 h-3.5 rounded-full border-2 border-white shadow" style="background:#22c55e;"></div>
         </div>
         <div class="p-6">
-          <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-2">Panda Dumpsters</h3>
+          <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-2">Panda Dumpsters</h3>
           <p class="text-[#4a6a82] text-sm leading-relaxed mb-3">A client site for a local dumpster rental business. Made it feel professional, trustworthy, and easy to book. Because even dumpster rental deserves a good website.</p>
           <span class="text-[#1a6fb5] text-sm font-medium">pandadumpsters.com →</span>
         </div>
@@ -481,7 +498,7 @@
           <div class="absolute top-3 right-3 w-3.5 h-3.5 rounded-full border-2 border-white shadow" style="background:#eab308;"></div>
         </div>
         <div class="p-6">
-          <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-2">Market Matters Online</h3>
+          <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-2">Market Matters Online</h3>
           <p class="text-[#4a6a82] text-sm leading-relaxed mb-3">A marketing blog for people who want help without the corporate fog machine. Practical AI, automation, SEO, and growth tactics that real businesses can use.</p>
           <span class="text-[#1a6fb5] text-sm font-medium">marketmattersonline.com →</span>
         </div>
@@ -494,7 +511,7 @@
           <div class="absolute top-3 right-3 w-3.5 h-3.5 rounded-full border-2 border-white shadow" style="background:#eab308;"></div>
         </div>
         <div class="p-6">
-          <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-2">Golden Strip Unite</h3>
+          <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-2">Golden Strip Unite</h3>
           <p class="text-[#4a6a82] text-sm leading-relaxed mb-3">A community platform for Simpsonville, Mauldin, and Fountain Inn. Good people are everywhere. Good intentions need a place to land. This is that place.</p>
           <span class="text-[#1a6fb5] text-sm font-medium">goldenstripunite.com →</span>
         </div>
@@ -507,7 +524,7 @@
           <div class="absolute top-3 right-3 w-3.5 h-3.5 rounded-full border-2 border-white shadow" style="background:#22c55e;"></div>
         </div>
         <div class="p-6">
-          <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-2">Art's Dominos</h3>
+          <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-2">Art's Dominos</h3>
           <p class="text-[#4a6a82] text-sm leading-relaxed mb-3">A Cuban Double-Nine domino game built around family, culture, and the kind of table energy that turns a simple game into a memory. Team play, stats, leaderboards.</p>
           <span class="text-[#1a6fb5] text-sm font-medium">Play Now →</span>
         </div>
@@ -520,7 +537,7 @@
           <div class="absolute top-3 right-3 w-3.5 h-3.5 rounded-full border-2 border-white shadow" style="background:#eab308;"></div>
         </div>
         <div class="p-6">
-          <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-2">Angln</h3>
+          <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-2">Angln</h3>
           <p class="text-[#4a6a82] text-sm leading-relaxed mb-3">A fishing-centered concept about more than fishing. Patience, skill, reading conditions, and knowing when to cast. A strong metaphor for business, marketing, and life.</p>
           <span class="text-[#1a6fb5] text-sm font-medium">angln.com →</span>
         </div>
@@ -533,7 +550,7 @@
           <div class="absolute top-3 right-3 w-3.5 h-3.5 rounded-full border-2 border-white shadow" style="background:#eab308;"></div>
         </div>
         <div class="p-6">
-          <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-2">PixelAnt</h3>
+          <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-2">PixelAnt</h3>
           <p class="text-[#4a6a82] text-sm leading-relaxed mb-3">A pixel ant colony simulation with Screensaver and Survival modes. Watch thousands of ants build, forage, and adapt in real time. Relaxing and oddly mesmerizing.</p>
           <span class="text-[#1a6fb5] text-sm font-medium">pixelant.netlify.app →</span>
         </div>
@@ -546,7 +563,7 @@
           <div class="absolute top-3 right-3 w-3.5 h-3.5 rounded-full border-2 border-white shadow" style="background:#eab308;"></div>
         </div>
         <div class="p-6">
-          <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-2">Skywriter</h3>
+          <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-2">Skywriter</h3>
           <p class="text-[#4a6a82] text-sm leading-relaxed mb-3">An arcade airplane game where your flight path literally creates tomorrow's weather. Every run changes the forecast. Part game, part butterfly effect, part weather experiment.</p>
           <span class="text-[#1a6fb5] text-sm font-medium">skywriter.netlify.app →</span>
         </div>
@@ -559,7 +576,7 @@
           <div class="absolute top-3 right-3 w-3.5 h-3.5 rounded-full border-2 border-white shadow" style="background:#22c55e;"></div>
         </div>
         <div class="p-6">
-          <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-2">Dungeonsweeper</h3>
+          <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-2">Dungeonsweeper</h3>
           <p class="text-[#4a6a82] text-sm leading-relaxed mb-3">A D&amp;D themed Minesweeper clone. Same logic, different world. How deep into the dungeon can you go before you trigger something you can't walk back from?</p>
           <span class="text-[#1a6fb5] text-sm font-medium">dsweep.netlify.app →</span>
         </div>
@@ -572,7 +589,7 @@
           <div class="absolute top-3 right-3 w-3.5 h-3.5 rounded-full border-2 border-white shadow" style="background:#22c55e;"></div>
         </div>
         <div class="p-6">
-          <h3 class="playfair text-[#0d2d52] text-xl font-bold mb-2">Buzzard Roost Daily Cast</h3>
+          <h3 class="playfair section-heading text-[#0d2d52] text-xl font-bold mb-2">Buzzard Roost Daily Cast</h3>
           <p class="text-[#4a6a82] text-sm leading-relaxed mb-3">A daily fishing game concept built around quick play and repeat engagement. Cast. Catch. Compare. Come back tomorrow. Could also become a marketing engine for fishing brands.</p>
           <span class="text-[#1a6fb5] text-sm font-medium">Play Now →</span>
         </div>
@@ -585,7 +602,7 @@
 <section id="faq" style="background:#f4f8fc;" class="py-24">
   <div class="max-w-4xl mx-auto px-6">
     <p class="text-[#1a6fb5] text-xs font-medium uppercase tracking-[0.18em] mb-3">Frequently Asked</p>
-    <h2 class="playfair text-[#0d2d52] mb-4" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">Questions I Get Asked a Lot</h2>
+    <h2 class="playfair section-heading text-[#0d2d52] mb-4" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;">Questions I Get Asked a Lot</h2>
     <div class="w-14 h-1 rounded-full mb-10" style="background:#1a6fb5;"></div>
 
     <div class="space-y-3" id="faq-list">
@@ -798,7 +815,7 @@
 <section class="py-20 bg-white">
   <div class="max-w-2xl mx-auto px-6 text-center">
     <p class="text-[#1a6fb5] text-xs font-medium uppercase tracking-[0.18em] mb-3">Get in Touch</p>
-    <h2 class="playfair text-[#0d2d52] mb-4" style="font-size:clamp(1.8rem,3.5vw,2.4rem);letter-spacing:-0.02em;">Want to connect?</h2>
+    <h2 class="playfair section-heading text-[#0d2d52] mb-4" style="font-size:clamp(1.8rem,3.5vw,2.4rem);letter-spacing:-0.02em;">Want to connect?</h2>
     <div class="w-14 h-1 rounded-full mb-6 mx-auto" style="background:#1a6fb5;"></div>
     <p class="text-[#4a6a82] text-lg mb-10 leading-relaxed">LinkedIn is the best place to reach me. Whether you want to talk shop, collaborate on something, or just say hello.</p>
     <a href="https://www.linkedin.com/in/johnsuchjr/" target="_blank" rel="noopener"
@@ -814,7 +831,7 @@
   <!-- ==================== FOOTER ==================== -->
 </main>
 <footer style="background:#0d2d52;" class="py-16">
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
     <div class="grid md:grid-cols-3 gap-10 mb-12">
       <!-- Brand -->
       <div>
