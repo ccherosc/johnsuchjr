@@ -20,6 +20,7 @@ const requiredExternalProjects = [
   'https://www.marketmattersonline.com',
   'https://www.goldenstripunite.com',
   'https://ccherosc.github.io/ArtsDominos-v2/',
+  'https://ccherosc.github.io/uberia-sidescroller/',
   'https://www.angln.com',
   'https://pixelant.netlify.app',
   'https://skywriter.netlify.app',

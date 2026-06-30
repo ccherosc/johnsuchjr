@@ -17,5 +17,8 @@
     "ai"
   ],
   "author": "John Such Jr.",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^25.2.1"
+  }
 }

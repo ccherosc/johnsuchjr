@@ -32,6 +32,7 @@ Personal brand site for **John Such Jr.** — futurist, marketer, builder.
 - [Market Matters Online](https://www.marketmattersonline.com)
 - [Golden Strip Unite](https://www.goldenstripunite.com)
 - [Art's Dominos](https://ccherosc.github.io/ArtsDominos-v2/)
+- [Uberia Side Scroller](https://ccherosc.github.io/uberia-sidescroller/)
 - [Angln](https://www.angln.com)
 - [PixelAnt](https://pixelant.netlify.app)
 - [Skywriter](https://skywriter.netlify.app)

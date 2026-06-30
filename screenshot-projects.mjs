@@ -11,6 +11,7 @@ const projects = [
   { slug: 'marketmattersonline', url: 'https://www.marketmattersonline.com' },
   { slug: 'goldenstripunite',  url: 'https://www.goldenstripunite.com' },
   { slug: 'artsdominos',       url: 'https://ccherosc.github.io/ArtsDominos-v2/' },
+  { slug: 'uberia-sidescroller', url: 'https://ccherosc.github.io/uberia-sidescroller/' },
   { slug: 'angln',             url: 'https://www.angln.com' },
   { slug: 'buzzardroost',      url: 'https://buzzard-roost-daily-cast-v2.pages.dev/' },
   { slug: 'pixelant',         url: 'https://pixelant.netlify.app' },
