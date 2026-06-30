@@ -48,8 +48,9 @@ function findLocalPaths(html) {
     if (value.startsWith('data:')) continue
     if (value.includes('${')) continue
     const normalized = value.startsWith('/') ? value.slice(1) : value
-    if (!normalized) continue
-    results.add(normalized)
+    const cleanPath = normalized.split('#')[0].split('?')[0]
+    if (!cleanPath) continue
+    results.add(cleanPath)
   }
   return [...results]
 }
